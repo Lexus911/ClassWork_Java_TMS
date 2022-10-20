@@ -1,6 +1,8 @@
 package com.example.lib;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Objects;
@@ -20,6 +22,12 @@ public class Lesson10 {
         System.out.println(arrayList.get(1));
         arrayList.add(1, "hell");
         System.out.println(arrayList.indexOf("go"));
+
+        Collections.sort(arrayList, Comparator.<String>naturalOrder());
+        System.out.println(arrayList);
+
+        Collections.sort(arrayList, Comparator.<String>reverseOrder());
+        System.out.println(arrayList);
 
         LinkedList<String > linkedList = new LinkedList<>();
         linkedList.add("we");
@@ -64,3 +72,4 @@ class Student{
         return Objects.hash(name);
     }
 }
+
