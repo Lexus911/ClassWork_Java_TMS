@@ -9,6 +9,8 @@ import java.util.Objects;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+
+
 public class Lesson10 {
     public static void main(String[] args) {
         ArrayList<String> arrayList = new ArrayList<>();
@@ -49,14 +51,21 @@ public class Lesson10 {
         hashSet.add(new Student("John"));
         hashSet.add(new Student("Olya"));
 
-        System.out.println(hashSet.size());
+        System.out.println();
+        for(Student student : hashSet){
+        System.out.println(student.getName());
+        }
     }
 }
 
 class Student{
-    private String name;
+    private  String name;
     Student(String name){
         this.name = name;
+    }
+
+    public  String getName() {
+        return name;
     }
 
     @Override
